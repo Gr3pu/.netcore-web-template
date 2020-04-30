@@ -10,11 +10,11 @@ namespace Templates.WebApp.Data
 {
 	public class DatabaseContext : IdentityDbContext
 	{
+		public DbSet<User> Users { get; set; }
+		public DbSet<UserActivity> UserActivities { get; set; }
+
 		// put tables here
-		public DbSet<LawArticle> LawArticles { get; set; }
-		public DbSet<Agreement> Agreements { get; set; }
-		public DbSet<SeoConfig> SeoConfigs { get; set; }
-		public DbSet<Question> Questions { get; set; }
+
 
 
 		public DatabaseContext(DbContextOptions<DatabaseContext> options)

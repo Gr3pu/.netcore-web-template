@@ -43,7 +43,10 @@ namespace Templates.WebApp
 
 
 			// workers:
-			services.AddTransient<IActivityMonitor, ActivityMonitor>();
+
+			services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
+			services.AddSingleton<EmailSettings>();
+			services.AddSingleton<IEmailSender, EmailSender>();
 
 
 			services.AddMvc(options => options.EnableEndpointRouting = false);

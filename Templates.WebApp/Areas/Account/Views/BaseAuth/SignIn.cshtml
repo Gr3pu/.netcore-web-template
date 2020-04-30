@@ -1,0 +1,40 @@
+﻿@model SignInVM
+@{
+    ViewData["Title"] = "Logowanie";
+}
+
+<div class="row mt-5">
+    <div class="col-sm-12 col-md-8 col-lg-5 mx-auto">
+        <div class="card">
+            <form method="post" class="card-body">
+                <h5 class="card-title">
+                    @ViewData["Title"]
+                </h5>
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <small asp-validation-for="Email" class="text-danger"></small>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <small asp-validation-for="Password" class="text-danger"></small>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label asp-for="RememberMe" class="mb-0">
+                            <input asp-for="RememberMe" />
+                            Zapamiętaj mnie?
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-sm btn-primary">
+                        Zaloguj
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

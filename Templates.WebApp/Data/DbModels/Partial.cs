@@ -5,11 +5,9 @@ using System.Threading.Tasks;
 
 namespace Templates.WebApp.Data.DbModels
 {
-	public class Agreement : BaseModel
+	public class Partial : BaseModel
 	{
-		public string Title { get; set; }
+		public string ShortName { get; set; }
 		public string Content { get; set; }
-
-		public bool IsRequired { get; set; }
 	}
 }
