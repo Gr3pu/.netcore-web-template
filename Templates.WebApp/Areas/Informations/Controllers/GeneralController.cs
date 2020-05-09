@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Templates.WebApp.Controllers;
-using Templates.WebApp.Workers;
 
 namespace Templates.WebApp.Areas.Informations.Controllers
 {
@@ -15,7 +14,6 @@ namespace Templates.WebApp.Areas.Informations.Controllers
 
         [HttpGet]
         [Route("")]
-        [ServiceFilter(typeof(ActivityMonitor))]
         public IActionResult Index()
         {
             return View();
